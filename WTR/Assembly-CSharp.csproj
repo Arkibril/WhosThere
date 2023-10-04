@@ -116,12 +116,12 @@
     <Compile Include="Assets\Scripts\Interaction\Interactable\Flechette\Flechette.cs" />
     <Compile Include="Assets\Scripts\ProximityEffects.cs" />
     <Compile Include="Assets\Scripts\GlobalVolumeController.cs" />
+    <Compile Include="Assets\InteractiveObject.cs" />
     <Compile Include="Assets\Scripts\HouseEnterAnimation.cs" />
     <Compile Include="Assets\Scripts\DATA\data\FirstLaunchData.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\ElectricPanel.cs" />
     <Compile Include="Assets\Scripts\DATA\data\Traduction.cs" />
-    <Compile Include="Assets\InteractiveObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Models\Map de test\Shaders\Built-in_RP\Triplanar.shader" />
