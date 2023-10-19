@@ -19,7 +19,7 @@ public class GateCheck : MonoBehaviour, IDataPersistence<FirstLaunchData>
 
         if (first == true)
         {
-            SceneManager.LoadSceneAsync("NoTime", LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Single);
 
         }
         else if(first == false)

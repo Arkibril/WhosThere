@@ -80,7 +80,6 @@
     <Compile Include="Assets\Plugins\Fps\Plugins\NaughtyAttributes\Scripts\Core\DrawerAttributes\ShowNativePropertyAttribute.cs" />
     <Compile Include="Assets\Plugins\Fps\Scripts\Interaction_System\InteractableBase.cs" />
     <Compile Include="Assets\Plugins\Fps\Scripts\Interaction_System\IPickable.cs" />
-    <Compile Include="Assets\Plugins\HDRP_Pine_Tree\Scripts\Offer\ALIyerEdonAssets_Lighting.cs" />
     <Compile Include="Assets\Plugins\Fps\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MinValueAttribute.cs" />
     <Compile Include="Assets\Plugins\TerrainDemoScene_HDRP\Scripts\SceneAnnotation.cs" />
     <Compile Include="Assets\Plugins\Fps\Plugins\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
@@ -98,12 +97,10 @@
     <Compile Include="Assets\Plugins\Knife\HDRP Outline\Scripts\HDRPOutline.cs" />
     <Compile Include="Assets\Plugins\EnemyAIPackage\Scripts\Aggro.cs" />
     <Compile Include="Assets\Plugins\Fps\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-    <Compile Include="Assets\Plugins\HDRP_Pine_Tree\Scripts\Offer\LightingTools_Offer.cs" />
     <Compile Include="Assets\Plugins\Fps\Plugins\NaughtyAttributes\Scripts\Core\MetaAttributes\InfoBoxAttribute.cs" />
     <Compile Include="Assets\Plugins\Knife\HDRP Outline\Scripts\OutlineIterations.cs" />
     <Compile Include="Assets\Plugins\Fps\Scripts\Scriptable_Objects\PerlinNoiseData.cs" />
     <Compile Include="Assets\Plugins\NOT_Lonely\HQ_RetroFarmhouse\Scripts\Modular Construction System\MCS_Manager\NL_MCS_Manager.cs" />
-    <Compile Include="Assets\Plugins\HDRP_Pine_Tree\Scripts\Pine_CameraMove.cs" />
     <Compile Include="Assets\Plugins\EnemyAIPackage\Scripts\Patrol.cs" />
     <Compile Include="Assets\Plugins\Pixel Play\Scripts\OffScreenIndicator\OffScreenIndicatorCore.cs" />
     <Compile Include="Assets\Plugins\Fps\Scripts\Interaction_System\InteractionController.cs" />
@@ -233,7 +230,6 @@
     <None Include="Assets\Plugins\Fps\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Plugins\Fps\Plugins\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Plugins\Beautify\Runtime\Resources\BeautifyDoF.hlsl" />
-    <None Include="Assets\Plugins\HDRP_Pine_Tree\Help\Quick Start.txt" />
     <None Include="Assets\Plugins\TerrainDemoScene_HDRP\Notes\ProceduralSkies.txt" />
   </ItemGroup>
   <ItemGroup>
