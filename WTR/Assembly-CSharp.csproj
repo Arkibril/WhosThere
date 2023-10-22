@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\HesHere.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Toaster\Toast.cs" />
+    <Compile Include="Assets\USplashScreen\Content\Script\Core\USplashScreen.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\TaskManager.cs" />
     <Compile Include="Assets\Scripts\HUD\HUD.cs" />
     <Compile Include="Assets\Scripts\OpenDoorJ2.cs" />
@@ -95,26 +96,30 @@
     <Compile Include="Assets\Scripts\TradScript.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Toaster\BreadPlate.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Levier.cs" />
+    <Compile Include="Assets\Scripts\DATA\data\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Clothes\Washer.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Chair\Chair.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Flechette\Points.cs" />
     <Compile Include="Assets\Scripts\ActivationWithTime.cs" />
+    <Compile Include="Assets\USplashScreen\Content\Script\Misc\USLoadingEffect.cs" />
     <Compile Include="Assets\Scripts\Footstep.cs" />
-    <Compile Include="Assets\Scripts\GateCheck.cs" />
     <Compile Include="Assets\Scripts\DestructionTime.cs" />
     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
     <Compile Include="Assets\Scripts\MeshDestroy.cs" />
     <Compile Include="Assets\Scripts\DesactivationWithTime.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Clothes\PileOfClothes.cs" />
     <Compile Include="Assets\Scripts\PostProcessingChangeValue.cs" />
+    <Compile Include="Assets\USplashScreen\Content\Script\Misc\USMarca.cs" />
     <Compile Include="Assets\Scripts\DesactivateObject.cs" />
     <Compile Include="Assets\Scripts\sceneLoaderWithTime.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Clothes\Dryer.cs" />
     <Compile Include="Assets\Scripts\DATA\DataPersistenceManager.cs" />
+    <Compile Include="Assets\Scripts\StartingScreen.cs" />
     <Compile Include="Assets\Scripts\DATA\IDataPersistence.cs" />
     <Compile Include="Assets\Scripts\HUD\PointerVerification.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable\Flechette\Flechette.cs" />
     <Compile Include="Assets\Scripts\ProximityEffects.cs" />
+    <Compile Include="Assets\USplashScreen\Content\Script\Core\USplash.cs" />
     <Compile Include="Assets\Scripts\GlobalVolumeController.cs" />
     <Compile Include="Assets\InteractiveObject.cs" />
     <Compile Include="Assets\Scripts\HouseEnterAnimation.cs" />
@@ -125,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Models\Map de test\Shaders\Built-in_RP\Triplanar.shader" />
+    <None Include="Assets\USplashScreen\ReadMe!.txt" />
     <None Include="Assets\Models\Map de test\Shaders\Built-in_RP\ArmatureShader.shader" />
   </ItemGroup>
   <ItemGroup>

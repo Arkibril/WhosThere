@@ -20,7 +20,7 @@ public class TradScript : MonoBehaviour, IDataPersistence<LanguageData>
         throw new System.NotImplementedException();
     }
 
-    private void Start()
+    private void Update()
     {
         // Accéder au FileDataHandler via la propriété dataHandler
         FileDataHandler handler = DataPersistenceManager.dataHandler;

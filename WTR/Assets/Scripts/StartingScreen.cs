@@ -13,31 +13,38 @@ public class StartingScreen : MonoBehaviour, IDataPersistence<PlayerData>
     void Start()
     {
         DataPersistenceManager.dataHandler = new FileDataHandler(Application.persistentDataPath, "player_data", DataPersistenceManager.doIUseEncryption);
-        DataPersistenceManager.instance.LoadPlayerData();
         StartCoroutine(NewPlayerCheck());
     }
 
-    public void LoadData(PlayerData data){
+    public void LoadData(PlayerData data)
+    {
         isNewPlayer = data.isNewPlayer;
     }
 
-    public void SaveData(ref PlayerData data){
+    public void SaveData(ref PlayerData data)
+    {
         data.isNewPlayer = isNewPlayer;
     }
 
-    IEnumerator NewPlayerCheck(){
+    IEnumerator NewPlayerCheck()
+    {
+        yield return new WaitForSeconds(0.5f);
+        DataPersistenceManager.instance.LoadPlayerData();
         yield return new WaitForSeconds(1);
-        if (isNewPlayer){
+        if (isNewPlayer)
+        {
             sceneToLoad = "Language";
             isNewPlayer = false;
             DataPersistenceManager.instance.SavePlayerData();
         }
-        else{
+        else
+        {
             sceneToLoad = "MainMenu";
         }
     }
 
-    public void ChangeScene(){
+    public void ChangeScene()
+    {
         SceneManager.LoadSceneAsync(sceneToLoad);
     }
 }

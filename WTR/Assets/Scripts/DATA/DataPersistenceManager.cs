@@ -13,10 +13,10 @@ public class DataPersistenceManager : MonoBehaviour
     public static DataPersistenceManager instance { get; private set; }
 
     public LanguageData languageData;
-    public List<IDataPersistence<LanguageData>> languageDataObjetcs;
+    private List<IDataPersistence<LanguageData>> languageDataObjects;
 
-    public FirstLaunchData firstLaunchData;
-    public List<IDataPersistence<FirstLaunchData>> firstLaunchDataObjects;
+    public PlayerData playerData;
+    private List<IDataPersistence<PlayerData>> playerDataObjects;
 
     private void Awake()
     {
@@ -34,8 +34,8 @@ public class DataPersistenceManager : MonoBehaviour
     private void Start()
     {
         this.playerStyleDataObjects = FindAllPlayerStyleData();
-        this.languageDataObjetcs = FindAllLanguageData();
-        this.firstLaunchDataObjects = FindAllFirstLaunchData();
+        this.languageDataObjects = FindAllLanguageData();
+        this.playerDataObjects = FindAllPlayerData();
 
     }
 
@@ -103,7 +103,7 @@ public class DataPersistenceManager : MonoBehaviour
             NewLanguage();
         }
 
-        foreach (IDataPersistence<LanguageData> dataPersistenceObj in languageDataObjetcs)
+        foreach (IDataPersistence<LanguageData> dataPersistenceObj in languageDataObjects)
         {
             dataPersistenceObj.LoadData(languageData);
         }
@@ -117,7 +117,7 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
-        foreach (IDataPersistence<LanguageData> dataPersistenceObj in languageDataObjetcs)
+        foreach (IDataPersistence<LanguageData> dataPersistenceObj in languageDataObjects)
         {
             dataPersistenceObj.SaveData(ref languageData);
         }
@@ -125,47 +125,47 @@ public class DataPersistenceManager : MonoBehaviour
         dataHandler.Save(languageData);
     }
 
-    public void NewFirstLaunch()
+    public void NewPlayerData()
     {
-        this.firstLaunchData = new FirstLaunchData();
+        this.playerData = new PlayerData();
     }
 
-    public void LoadFirst()
+    public void LoadPlayerData()
     {
         if (dataHandler == null)
         {
-            Debug.LogError("DataHandler is not assigned. Cannot load FirstLaunchData.");
+            Debug.LogError("DataHandler is not assigned. Cannot load PlayerData.");
             return;
         }
 
-        this.firstLaunchData = dataHandler.Load<FirstLaunchData>();
+        this.playerData = dataHandler.Load<PlayerData>();
 
-        if (this.firstLaunchData == null)
+        if (this.playerData == null)
         {
             Debug.Log("Aucun data n'a été trouvé. Initialisation des data par défauts");
-            NewFirstLaunch();
+            NewPlayerData();
         }
 
-        foreach (IDataPersistence<FirstLaunchData> dataPersistenceObj in firstLaunchDataObjects)
+        foreach (IDataPersistence<PlayerData> dataPersistenceObj in playerDataObjects)
         {
-            dataPersistenceObj.LoadData(firstLaunchData);
+            dataPersistenceObj.LoadData(playerData);
         }
     }
 
-    public void SaveFirst()
+    public void SavePlayerData()
     {
         if (dataHandler == null)
         {
-            Debug.LogError("DataHandler is not assigned. Cannot save FirstLaunchData.");
+            Debug.LogError("DataHandler is not assigned. Cannot save PlayerData.");
             return;
         }
 
-        foreach (IDataPersistence<FirstLaunchData> dataPersistenceObj in firstLaunchDataObjects)
+        foreach (IDataPersistence<PlayerData> dataPersistenceObj in playerDataObjects)
         {
-            dataPersistenceObj.SaveData(ref firstLaunchData);
+            dataPersistenceObj.SaveData(ref playerData);
         }
 
-        dataHandler.Save(firstLaunchData);
+        dataHandler.Save(playerData);
     }
 
     private List<IDataPersistence<PlayerStyleData>> FindAllPlayerStyleData()
@@ -187,32 +187,33 @@ public class DataPersistenceManager : MonoBehaviour
     private List<IDataPersistence<LanguageData>> FindAllLanguageData()
     {
         MonoBehaviour[] monoBehaviours = FindObjectsOfType<MonoBehaviour>();
-        List<IDataPersistence<LanguageData>> languageDataObjetcs = new List<IDataPersistence<LanguageData>>();
+        List<IDataPersistence<LanguageData>> languageDataObjects = new List<IDataPersistence<LanguageData>>();
 
         foreach (var monoBehaviour in monoBehaviours)
         {
             if (monoBehaviour is IDataPersistence<LanguageData> languageDataObj)
             {
-                languageDataObjetcs.Add(languageDataObj);
+                languageDataObjects.Add(languageDataObj);
             }
         }
 
-        return languageDataObjetcs;
+        return languageDataObjects;
     }
 
-    private List<IDataPersistence<FirstLaunchData>> FindAllFirstLaunchData()
+    private List<IDataPersistence<PlayerData>> FindAllPlayerData()
     {
         MonoBehaviour[] monoBehaviours = FindObjectsOfType<MonoBehaviour>();
-        List<IDataPersistence<FirstLaunchData>> firstLaunchDataObjects = new List<IDataPersistence<FirstLaunchData>>();
+        List<IDataPersistence<PlayerData>> playerDataObjects = new List<IDataPersistence<PlayerData>>();
 
         foreach (var monoBehaviour in monoBehaviours)
         {
-            if (monoBehaviour is IDataPersistence<FirstLaunchData> firstLaunchDataObj)
+            if (monoBehaviour is IDataPersistence<PlayerData> playerDataObj)
             {
-                firstLaunchDataObjects.Add(firstLaunchDataObj);
+                playerDataObjects.Add(playerDataObj);
             }
         }
 
-        return firstLaunchDataObjects;
+        return playerDataObjects;
     }
+
 }
