@@ -51,6 +51,8 @@ public class Flechette : MonoBehaviour
             V_Filler[i].fillAmount = 0f;
         }
 
+        player = GameObject.FindWithTag("PlayerHeadTag");
+
     }
 
     // Update is called once per frame
@@ -94,7 +96,7 @@ public class Flechette : MonoBehaviour
                 GUI[0].SetActive(true);
                 GUI[1].SetActive(false);
             }
-            if (GUIActivate == 1)
+            else if (GUIActivate == 1)
             {
                 GUI[0].SetActive(false);
                 GUI[1].SetActive(true);
